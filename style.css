@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
+html, body {
+    overflow-x: hidden;
+}
+
+body
+{
+    background-color: #0F0E0E;
+
+    display: flex;
+    justify-content: center;
+}
+
+.sys
+{
+    padding-bottom: 10vh;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.panel
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.386) 3px, rgba(255, 0, 0, 0) 5px)
+}
+
+.title
+{
+    color: #8B9A46;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    text-shadow: 0 0 5px #C8C8C8;
+
+    margin-top: 1rem;
+}
+
+.eclipse
+{
+    margin-top: 10rem;
+}
+
+.eclipse .sun
+{
+    background-color: #8b9a46;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    box-shadow: 0 0 40px 15px #eee;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.eclipse .sun .moon
+{
+    background-color: #0F0E0E;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px #0F0E0E;
+
+    position: relative;
+    top: 1rem;
+
+    animation-name: moon_anim;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moon_anim {
+    0% {
+        background-color: #000;
+        box-shadow: 0 0 20px 5px #000;
+        left: 0rem;
+    }
+    25% {
+        background-color: #0F0E0E;
+        box-shadow: 0 0 20px 5px #0F0E0E;
+        left: 22rem;
+    }
+    50% {
+        background-color: #000;
+        box-shadow: 0 0 20px 5px #000;
+        left: 0rem;
+    }
+    75% {
+        background-color: #0F0E0E;
+        box-shadow: 0 0 20px 5px #0F0E0E;
+        left: -22rem;
+    }
+    100% {
+        background-color: #000;
+        box-shadow: 0 0 20px 5px #000;
+        left: 0rem;
+    }
+}
+.contact_list
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    padding-top: 5rem;
+    z-index: 1000;
+}
+
+.contact_list img
+{
+    width: 2rem;
+    height: 2rem;
+}
+
+.contact_list a
+{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100% !important;
+    filter: drop-shadow(0 0px 5px #c8c8c8);
+
+    transition: 0.5s;
+}
+
+.contact_list a:hover
+{
+    background-size: 100% 100% !important;
+    filter: drop-shadow(0 0px 10px #eee);
+}
