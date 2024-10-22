@@ -26,18 +26,33 @@ body
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.386) 3px, rgba(255, 0, 0, 0) 5px)
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.386) 3px, rgba(255, 0, 0, 0) 5px);
+    z-index: -10;
+    position: fixed;
 }
 
-.title
+.header
 {
     color: #8B9A46;
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
-    font-size: 6rem;
-    text-shadow: 0 0 5px #C8C8C8;
-
     margin-top: 1rem;
+    text-align: center;
+}
+
+.title
+{
+    font-size: 6rem;
+    text-shadow: 0 0 5px #C8C8C890;
+    margin: 0;
+
+}
+
+#title_comment
+{
+    font-size: 1rem;
+    text-shadow: 0 0 5px #C8C8C890;
+    margin: 0;
 }
 
 .eclipse
@@ -104,7 +119,6 @@ body
 }
 .contact_list
 {
-    position: absolute;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -138,4 +152,47 @@ body
 {
     background-size: 100% 100% !important;
     filter: drop-shadow(0 0px 10px #eee);
+}
+
+#contact_me
+{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+#contact_me button
+{
+    color: #8B9A46;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    
+    text-shadow: 0 0 5px #c8c8c890;
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+
+    transition: 0.5s;
+}
+
+#contact_me button:hover
+{
+    background-color: #8B9A46;
+    color: #eee;
+}
+
+.projects_div
+{
+    color: #8B9A46;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #c8c8c890;
+
+    margin-top: 15rem;
 }
